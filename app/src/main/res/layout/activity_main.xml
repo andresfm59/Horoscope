@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".horoscapp.ui.home.MainActivity">
+    tools:context=".ui.home.MainActivity">
 
     <FrameLayout
         android:id="@+id/toolbar"
@@ -28,12 +28,12 @@
     </FrameLayout>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContairnerView"
+        android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"

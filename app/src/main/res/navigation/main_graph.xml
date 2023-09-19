@@ -7,17 +7,30 @@
 
     <fragment
         android:id="@+id/horoscopeFragment"
-        android:name="com.example.projectmvvmrest.horoscapp.ui.horoscope.HoroscopeFragment"
+        android:name="com.example.projectmvvmrest.ui.horoscope.HoroscopeFragment"
         android:label="fragment_horoscope"
-        tools:layout="@layout/fragment_horoscope" />
+        tools:layout="@layout/fragment_horoscope" >
+        <action
+            android:id="@+id/action_horoscopeFragment_to_horoscopeDetailActivity"
+            app:destination="@id/horoscopeDetailActivity" />
+    </fragment>
     <fragment
         android:id="@+id/luckFragment"
-        android:name="com.example.projectmvvmrest.horoscapp.ui.luck.LuckFragment"
+        android:name="com.example.projectmvvmrest.ui.luck.LuckFragment"
         android:label="fragment_luck"
         tools:layout="@layout/fragment_luck" />
     <fragment
         android:id="@+id/palmistryFragment"
-        android:name="com.example.projectmvvmrest.horoscapp.ui.palmistry.PalmistryFragment"
+        android:name="com.example.projectmvvmrest.ui.palmistry.PalmistryFragment"
         android:label="fragment_palmistry"
         tools:layout="@layout/fragment_palmistry" />
+    <activity
+        android:id="@+id/horoscopeDetailActivity"
+        android:name="com.example.projectmvvmrest.ui.detail.HoroscopeDetailActivity"
+        android:label="activity_horoscope_detail"
+        tools:layout="@layout/activity_horoscope_detail" >
+        <argument
+            android:name="type"
+            app:argType="com.example.projectmvvmrest.domain.model.HoroscopeModel" />
+    </activity>
 </navigation>
